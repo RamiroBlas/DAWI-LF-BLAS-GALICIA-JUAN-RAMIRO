@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "bec59fc2-1d72-4e13-857a-6582099b7c1b",
+		"name": "DAWl-EF-BLAS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23291684"
+	},
+	"item": [
+		{
+			"name": "registrar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"make\": \"Toyota\",\r\n  \"model\": \"Hilux\",\r\n  \"year\": 2020,\r\n  \"vin\": \"1HGBH41JXMN109186\",\r\n  \"licensePlate\": \"ABC1234\",\r\n  \"ownerName\": \"Ramiro Blas\",\r\n  \"ownerContact\": \"123-456-7890\",\r\n  \"purchaseDate\": \"2020-01-01\",\r\n  \"mileage\": 15000,\r\n  \"engineType\": \"Hybrid\",\r\n  \"color\": \"Blue\",\r\n  \"insuranceCompany\": \"InsuranceCo\",\r\n  \"insurancePolicyNumber\": \"POLICY1234\",\r\n  \"registrationExpirationDate\": \"2024-12-12\",\r\n  \"serviceDueDate\": \"2023-06-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cars/crear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cars",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"carId\": 1,\r\n  \"make\": \"Toyotaaaaa\",\r\n  \"model\": \"Corolla\",\r\n  \"year\": 2021,\r\n  \"vin\": \"1HGBH41JXMN109186\",\r\n  \"licensePlate\": \"XYZ123\",\r\n  \"ownerName\": \"Juan Pérez\",\r\n  \"ownerContact\": \"123-456-7890\",\r\n  \"purchaseDate\": \"2020-01-15\",\r\n  \"mileage\": 25000,\r\n  \"engineType\": \"Gasoline\",\r\n  \"color\": \"Red\",\r\n  \"insuranceCompany\": \"ABC Insurance\",\r\n  \"insurancePolicyNumber\": \"POLICY123\",\r\n  \"registrationExpirationDate\": \"2024-01-01\",\r\n  \"serviceDueDate\": \"2025-01-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cars/actualizar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cars",
+						"actualizar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cars/lista",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cars",
+						"lista"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cars/detalle?id=11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cars",
+						"detalle"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "11"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cars/remover?id=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cars",
+						"remover"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
